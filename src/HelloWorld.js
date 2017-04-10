@@ -6,6 +6,7 @@ import './HelloWorld.css';
 class HelloWorld extends Component {
 	constructor(props) {
   super(props);
+  this.frenchify = this.frenchify.bind(this);
   this.state = { greeting: 'Hello' };
 }
 render() {
@@ -16,6 +17,9 @@ render() {
       <button onClick={this.frenchify}>Frenchify!</button>
     </div>
   );
+}
+frenchify() {
+  this.setState({ greeting: 'Bonjour' });
 }
 }
 
